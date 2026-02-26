@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concesionario</title>
+    <link rel="icon" type="image/svg" href="assets/Imagologo_motion.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <img src="assets/Imagologotipo_motion.svg" alt="Logo concesionario" class="logo">
+        <h1>Concesionario - Solicitudes de Vehículos</h1>
+        <!--<h1>Bienvenido</h1> -->
+    <p class="subtitle">Monitoring innovation</p>
+
+    <div id="message" class="message"></div>
+    <div class="links">
+        <a href="https://monitoringinnovation.com/" target="_blank">Motion</a>
+        <a href="https://gpscontrol.co/" target="_blank">GPS Control</a>
+    </div>
+    <a href="https://github.com/AndFeRodriguezB/CarApp-Frontend.git" target="_blank" class="repo-icon">
+        <i class="fab fa-github"></i> Frontend
+    </a>
+    <a href="https://github.com/AndFeRodriguezB/CarApp-Backend.git" target="_blank" class="repo-icon">
+        <i class="fab fa-github"></i> Backend
+    </a>
+
+    </header>
+
+    <main>
+        <section class="from-section">
+            <h2>Registrar solicitud</h2>
+
+            <form id="carForm">
+                <input type="text" id="marca" placeholder="Marca del vehículo" required>
+                <input type="text" id="localidad" placeholder="Localidad de llegada" required>
+                <input type="text" id="solicitante" placeholder="Nombre del solicitante" required>
+                <button type="submit">Agregar</button>
+            </form>
+        </section>
+
+        <section class="table-section">
+            <h2>Lista de Solicitudes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Marca</th>
+                        <th>Localidad</th>
+                        <th>Solicitante</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="carTableBody">
+                    <!-- Espacio para los datos -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
