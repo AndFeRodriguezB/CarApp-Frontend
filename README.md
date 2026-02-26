@@ -92,6 +92,14 @@ Cada push a la rama `main` genera un nuevo deploy.
 
 ---
 
+## 🔗 Repositorio del Backend
+
+Código del backend disponible en:
+
+https://github.com/AndFeRodriguezB/CarApp-Backend.git
+
+---
+
 ## 👨‍💻 Autor
 
 Proyecto desarrollado como aplicación Full Stack profesional para portafolio.
