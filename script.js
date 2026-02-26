@@ -15,7 +15,7 @@ function showMessage(text, type){
 
 async function loadCars(){
     try{
-        const response = await fetch(`${API_URL}/api/v1/cars`);
+        const response = await fetch(`${API_URL}/cars`);
         const data = await response.json();
 
         const tableBody = document.getElementById("carTableBody");
@@ -46,7 +46,7 @@ async function deleteCar(id){
     const confirmDelete = confirm("Esta seguro de que desea eliminar el registro?");
     if (!confirmDelete) return;
     try {
-        const response = await fetch(`${API_URL}/api/v1/cars/${id}`,{
+        const response = await fetch(`${API_URL}/cars/${id}`,{
             method: "DELETE"
         });
 
@@ -91,7 +91,7 @@ form.addEventListener("submit", async function(event){
 
     try{
         if (editingId){
-            await fetch(`${API_URL}/api/v1/cars/${editingId}`,{
+            await fetch(`${API_URL}/cars/${editingId}`,{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json"
@@ -104,7 +104,7 @@ form.addEventListener("submit", async function(event){
             editingId = null;
             document.querySelector("button[type='submit']").textContent = "Agregar";
         } else{
-            await fetch(`${API_URL}/api/v1/cars`,{
+            await fetch(`${API_URL}/cars`,{
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
